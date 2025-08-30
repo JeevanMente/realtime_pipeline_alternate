@@ -1,4 +1,3 @@
-# lambda_function.py
 """
 SQS → Lambda → DynamoDB (+ SNS alerts)
 
