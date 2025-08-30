@@ -1,0 +1,9 @@
+output "queue_url"           { value = aws_sqs_queue.transactions.id }
+output "queue_arn"           { value = aws_sqs_queue.transactions.arn }
+output "dlq_url"             { value = aws_sqs_queue.dlq.id }
+output "orders_table_name"   { value = aws_dynamodb_table.orders.name }
+output "alerts_topic_arn"    { value = aws_sns_topic.alerts.arn }
+output "alarms_topic_arn"    { value = aws_sns_topic.alarms.arn }
+output "lambda_function"     { value = aws_lambda_function.processor.function_name }
+output "artifacts_bucket"    { value = aws_s3_bucket.artifacts.bucket }
+output "dashboard_name"      { value = try(aws_cloudwatch_dashboard.rt_dashboard[0].dashboard_name, null) }
